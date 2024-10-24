@@ -64,7 +64,7 @@ final class StatisicService: StatisticServiceProtocol {
     var totalAccuracy: Double {
         let totalQuestions = storage.integer(forKey: Keys.totalInGame.rawValue)
         if totalQuestions == 0 { return 0 }
-        return Double(correctAnswers) / Double(totalQuestions)
+        return Double(correctAnswers) / Double(totalQuestions) * 100
     }
     
     func store(correct: Int, total: Int) {

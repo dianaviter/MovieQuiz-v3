@@ -33,6 +33,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="1/2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1Q-WG-mNu">
                                                 <rect key="frame" x="362" y="0.0" width="26" height="24"/>
                                                 <color key="tintColor" name="YP White"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Index"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" name="YP White"/>
                                                 <nil key="highlightedColor"/>
@@ -42,6 +43,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RXB-4l-s2a">
                                         <rect key="frame" x="0.0" y="44" width="388" height="582"/>
                                         <color key="backgroundColor" name="YP White"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Poster"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RXB-4l-s2a" secondAttribute="height" multiplier="2:3" id="Zam-Ya-1F8"/>
                                         </constraints>
@@ -49,7 +51,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше, чем 7?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOW-aZ-ar0">
                                         <rect key="frame" x="0.0" y="646" width="388" height="109"/>
                                         <color key="tintColor" name="YP White"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" name="YP White"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -59,7 +61,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYu-eB-jeO">
                                                 <rect key="frame" x="0.0" y="0.0" width="184" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="No"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Нет">
@@ -71,13 +74,14 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="noButtonClicked:" destination="OiA-Lp-j08" eventType="touchUpInside" id="9td-IJ-t5n"/>
+                                                    <action selector="noButtonClicked:" destination="OiA-Lp-j08" eventType="touchUpInside" id="u34-Yd-F3N"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgm-09-RIT">
                                                 <rect key="frame" x="204" y="0.0" width="184" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Yes"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Да">
@@ -89,7 +93,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="yesButtonClicked:" destination="OiA-Lp-j08" eventType="touchUpInside" id="40q-wv-8fg"/>
+                                                    <action selector="yesButtonClicked:" destination="OiA-Lp-j08" eventType="touchUpInside" id="t1d-PY-Rur"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -117,13 +121,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="1Ne-OS-vr7" id="cYe-gx-uvv"/>
+                        <outlet property="activityIndicator" destination="1Ne-OS-vr7" id="7qn-9n-ypN"/>
                         <outlet property="counterLabel" destination="v1Q-WG-mNu" id="P1r-At-ZBC"/>
                         <outlet property="imageView" destination="RXB-4l-s2a" id="xKm-69-pf9"/>
                         <outlet property="noButton" destination="mYu-eB-jeO" id="Nyx-oG-4LT"/>
-                        <outlet property="questionTitleLabel" destination="huC-Sq-XvG" id="6y0-st-UCl"/>
+                        <outlet property="questionTitle" destination="huC-Sq-XvG" id="95R-k2-j1J"/>
                         <outlet property="textLabel" destination="EOW-aZ-ar0" id="ULF-dF-Kih"/>
-                        <outlet property="yesButton" destination="jgm-09-RIT" id="Ltf-R3-U6Q"/>
+                        <outlet property="yesButton" destination="jgm-09-RIT" id="q6L-aP-kEZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJv-6d-fKU" sceneMemberID="firstResponder"/>

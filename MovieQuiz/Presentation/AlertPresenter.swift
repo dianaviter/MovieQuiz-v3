@@ -17,12 +17,13 @@ class AlertPresenter: AlertPresenterProtocol {
                 title: quiz.title,
                 message: quiz.message,
                 preferredStyle: .alert)
-            
+
         let action = UIAlertAction(
             title: quiz.buttonText,
             style: .default) { _ in
                 quiz.completion ()
             }
+            alert.view.accessibilityIdentifier = "Game results"
             alert.addAction(action)
             delegate.present(alert, animated: true, completion: nil)
         }
